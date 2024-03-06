@@ -14,7 +14,7 @@ env:
 
 jobs:
   job:
-    name: ${{ matrix.os }}-${{ matrix.buildtype }}
+    name: ${{ matrix.os }}-${{ matrix.buildtype }}06032024
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
@@ -65,14 +65,14 @@ jobs:
       - name: Create and Upload Artifact (exe)
         uses: actions/upload-artifact@main
         with:
-          name: otclient-${{ matrix.buildtype }}-${{ github.sha }}
+          name: otclient-${{ matrix.buildtype }}-${{ github.sha }}06032024
           path: |
             ${{ github.workspace }}/otclient.exe
             
       - name: Create and Upload Artifact (dlls)
         uses: actions/upload-artifact@main
         with:
-          name: otclient-${{ matrix.buildtype }}-${{ github.sha }}
+          name: otclient-${{ matrix.buildtype }}-${{ github.sha }}06032024
           path: |
             ${{ github.workspace }}/*.dll
 
